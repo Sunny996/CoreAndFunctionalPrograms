@@ -11,7 +11,7 @@ public class LargestAmongThree {
     Scanner sc = new Scanner(System.in);
     double arr[] = {sc.nextDouble(), sc.nextDouble(), sc.nextDouble()};
 
-    public double largestNum = 0;
+    public double largestNum = Integer.MIN_VALUE;
 
     public double largestOfThree() {
         for (double i : arr) {
