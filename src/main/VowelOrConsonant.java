@@ -9,11 +9,11 @@ public class VowelOrConsonant {
     }
 
     Scanner sc = new Scanner(System.in);
-    String alphabet = sc.next();
+    char alphabet = sc.next().charAt(0);
 
     public void checkAlphabet() {
-        if (alphabet.equalsIgnoreCase("a") || alphabet.equalsIgnoreCase("e") || alphabet.equalsIgnoreCase("i")
-                || alphabet.equalsIgnoreCase("o") || alphabet.equalsIgnoreCase("u"))
+        if (Character.toLowerCase(alphabet)=='a' || Character.toLowerCase(alphabet)=='e'|| Character.toLowerCase(alphabet)=='i'
+                || Character.toLowerCase(alphabet)=='o' || Character.toLowerCase(alphabet)=='u')
             System.out.println("The alphabet is a Vowel");
         else
             System.out.println("The alphabet is a consonant");
