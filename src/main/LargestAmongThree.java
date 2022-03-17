@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LargestAmongThree {
     public static void main(String[] args) {
         LargestAmongThree largestAmongThree = new LargestAmongThree();
-        System.out.println(largestAmongThree.largestOfThree());
+        largestAmongThree.largestOfThree();
     }
 
     Scanner sc = new Scanner(System.in);
@@ -13,12 +13,15 @@ public class LargestAmongThree {
 
     public double largestNum = Integer.MIN_VALUE;
 
-    public double largestOfThree() {
+    public void largestOfThree() {
+        if(Double.compare(arr[0],arr[1])==0 && Double.compare(arr[2],arr[1])==0)
+            System.out.println("All three values are equal");
+        else{
         for (double i : arr) {
             if (largestNum < i)
                 largestNum = i;
         }
-        return largestNum;
+            System.out.println("The largest of three is "+largestNum);}
     }
 
 }
